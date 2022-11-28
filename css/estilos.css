@@ -11,6 +11,9 @@ body {
     position: relative;
     padding-bottom: 100px;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* inicio logo*/
@@ -98,36 +101,22 @@ main {
 /*origen*/
 #grilla_origen {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 1fr 150px;
+    grid-template-rows: 900px;
     grid-template-areas: "area1 area1"
-        "area3 area3"
-        "area4 area4";
+        "area1 area1"
+        ;
 }
 
-#h2_origen {
-    display: flex;
+
+#carta1{
     grid-area: area1;
-    font-size: 35px;
 }
 
-#txt_origen {
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    grid-area: area4;
-}
-
-
-#img_origen {
-    display: flex;
-    justify-content: center;
-    grid-area: area3;
-    width: 600px;
-    height: 400px;
-    padding-left: 25%;
+#carta_txt{
+    color: white;
+    
 
 }
-
 
 
 
@@ -147,7 +136,7 @@ main {
     grid-area: area3;
     align-items: center;
     padding-bottom: 45%;
-    padding-top: 25px;
+    padding-top: 0%;
     font-size: 35px;
 }
 
@@ -155,8 +144,9 @@ main {
 #texto {
     grid-area: area3;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 70px;
     font-size: 25px;
+    
 }
 
 
@@ -164,19 +154,14 @@ main {
     display: flex;
     grid-area: area2;
     width: 100%;
-    height: 300px;
-    justify-content: center;
-    padding-top: 25px;
+    height: auto;
+    padding-top: 10%;
+    padding-right: 5%;
 }
 
 #mapa {
     display: flex;
-    grid-area: area4;
-    width: 53.5%;
-    height: 300px;
-    justify-content: center;
-    padding-top: 25px;
-    padding-left: 200px;
+    padding-top: 10%;
 
 }
 
@@ -184,14 +169,14 @@ main {
     grid-area: area1;
     align-items: center;
     padding-bottom: 45%;
-    padding-top: 25px;
+    padding-top: 0%;
     font-size: 35px;
 }
 
 #txtproduccion {
     grid-area: area1;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 70px;
     font-size: 25px;
 }
 
@@ -202,14 +187,14 @@ main {
 
 #grilla_comprar {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 400fr 150px 70px;
+    grid-template-rows: 100px 1fr 100px 100px;
     grid-template-areas: "area1 area1"
         "area3 area3"
         "area4 area4"
         "area5 area5";
 }
 
-#subtitulo_comprar {
+#h2_comprar {
     display: flex;
     grid-area: area1;
     justify-content: center;
@@ -222,13 +207,9 @@ main {
     font-size: 25px;
 }
 
-#img_comprar {
-    display: flex;
-    justify-content: center;
-    grid-area: area3;
-    width: 600px;
-    height: 400px;
-    padding-left: 25%;
+#img_comprar{
+    
+    
 }
 
 #boton {
@@ -243,12 +224,18 @@ main {
 
 #grilla_contacto {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 200px 300px;
+    grid-template-rows: 100px 300px;
     grid-template-areas: "area1 area1"
         "area3 area3";
 
 }
 
+#form_contacto{
+    grid-area: area3;
+    width: 65%;
+    height: 20%;
+    
+}
 
 #contacto {
     display: flex;
@@ -273,7 +260,7 @@ main {
     font-weight: bold;
     justify-content: center;
     grid-area: area1;
-    text-decoration: underline;
+    
     padding-top: 10%;
 }
 
@@ -305,6 +292,8 @@ main {
     justify-content: space-evenly;
     align-content: space-around;
 }
+
+
 
 
 
@@ -416,6 +405,7 @@ h2 {
 
 /* inicio footer*/
 
+
 footer {
     display: block;
     position: absolute;
@@ -423,7 +413,7 @@ footer {
     width: 100%;
 }
 
-footer .container {
+#footer {
     height: 50px;
     display: flex;
     background-color: rgba(152, 151, 151, 0.767);
@@ -571,14 +561,16 @@ footer p {
         grid-area: area2;
         display: flex;
         justify-content: center;
-        width: 400px;
-        height: 80%;
+        width: 300px;
+        height: 90%;
+        padding-left: 20%;
     }
 
     #h2produccion {
         grid-area: area1;
         display: flex;
         font-size: 20px;
+        padding-top: 20px;
     }
 
     #txtproduccion {
@@ -628,37 +620,29 @@ footer p {
 
     #grilla_origen {
         grid-template-columns: 50% 50%;
-        grid-template-rows: 70px 200px 70px;
+        grid-template-rows: 500px;
         grid-template-areas: "area1 area1"
-            "area3 area3"
-            "area4 area4";
+            "area1 area1"
+            ;
     }
 
-    #h2_origen {
-        display: flex;
-        grid-area: area1;
+    #carta1{
+        width: 300px;
+        height: 80%;
+        
+    }
+
+    #subtitulo_origen{
+
         font-size: 20px;
     }
 
-    #txt_origen {
-        display: flex;
-        justify-content: center;
-        font-size: 15px;
-        grid-area: area4;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin: 0;
 
+    #txt_origen{
+        font-size: 17px;
     }
 
 
-    #img_origen {
-        display: flex;
-        grid-area: area3;
-        justify-content: center;
-        width: 300px;
-        height: 150px;
-        padding-left: 10%;
 
     }
 
