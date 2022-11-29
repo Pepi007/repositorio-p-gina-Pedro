@@ -104,17 +104,17 @@ main {
     grid-template-rows: 900px;
     grid-template-areas: "area1 area1"
         "area1 area1"
-        ;
+    ;
 }
 
 
-#carta1{
+#carta1 {
     grid-area: area1;
 }
 
-#carta_txt{
+#carta_txt {
     color: white;
-    
+
 
 }
 
@@ -146,7 +146,7 @@ main {
     align-items: center;
     padding-top: 70px;
     font-size: 25px;
-    
+
 }
 
 
@@ -187,36 +187,29 @@ main {
 
 #grilla_comprar {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 1fr 100px 100px;
+    grid-template-rows: 100px 800px 200px;
     grid-template-areas: "area1 area1"
         "area3 area3"
-        "area4 area4"
-        "area5 area5";
+        "area4 area4";
 }
 
-#h2_comprar {
+.h1_comprar {
     display: flex;
     grid-area: area1;
     justify-content: center;
-
+    font-size: 30px;
+    padding-top: 20px;
 }
 
-#txt_comprar {
-    display: flex;
+#container_carousel {
+    grid-area: area3;
+}
+
+#boton_comprar {
+
     grid-area: area4;
-    font-size: 25px;
 }
 
-#img_comprar{
-    
-    
-}
-
-#boton {
-    display: flex;
-    justify-items: center;
-    grid-area: area5;
-}
 
 /*comprar*/
 
@@ -224,17 +217,17 @@ main {
 
 #grilla_contacto {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 100px 300px;
+    grid-template-rows: 100px 400px;
     grid-template-areas: "area1 area1"
         "area3 area3";
 
 }
 
-#form_contacto{
+#form_contacto {
     grid-area: area3;
     width: 65%;
     height: 20%;
-    
+
 }
 
 #contacto {
@@ -254,22 +247,25 @@ main {
 
 }
 
-#p_contacto {
-    display: flex;
-    font-size: 22px;
-    font-weight: bold;
-    justify-content: center;
-    grid-area: area1;
-    
-    padding-top: 10%;
-}
+
 
 #h2_contacto {
     display: flex;
     font-size: 30px;
     grid-area: area1;
     justify-content: center;
+    padding-top: 30px;
+}
 
+#boton_comprar{
+    padding-left: 37%; 
+    padding-top: 20px;
+}
+
+#propiedades_boton{
+    width: 200px;
+    height: 90px;
+    font-size: 30px;
 }
 
 
@@ -623,138 +619,122 @@ footer p {
         grid-template-rows: 500px;
         grid-template-areas: "area1 area1"
             "area1 area1"
-            ;
+        ;
     }
 
-    #carta1{
+    #carta1 {
         width: 300px;
         height: 80%;
-        
+
     }
 
-    #subtitulo_origen{
+    #subtitulo_origen {
 
         font-size: 20px;
     }
 
 
-    #txt_origen{
+    #txt_origen {
         font-size: 17px;
     }
 
 
 
-    }
 
 
 
 
-    /*origen queries*/
+
+/*origen queries*/
 
 
 
-    /*comprar queries*/
+/*comprar queries*/
 
-    #grilla_comprar {
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 60px 400fr 150px 50px;
-        grid-template-areas: "area1 area1"
-            "area3 area3"
-            "area4 area4"
-            "area5 area5";
-    }
+#grilla_comprar {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 90px 400fr 150px ;
+    grid-template-areas: "area1 area1"
+        "area3 area3"
+        "area4 area4";
+        }
 
-    #subtitulo_comprar {
-        display: flex;
-        grid-area: area1;
-        justify-content: center;
-        font-size: 20px;
-    }
+        .h1_comprar{
+            font-size: 20px;
 
-    #txt_comprar {
-        display: flex;
-        grid-area: area4;
-        font-size: 15px;
-        padding-left: 5px;
-        padding-right: 5px;
-        margin: 0;
-    }
-
-    #img_comprar {
-        display: flex;
-        justify-content: center;
-        grid-area: area3;
-        width: 300px;
-        height: 150px;
-        padding-left: 10%;
-    }
-
-    #boton {
-        display: flex;
-        justify-items: center;
-        grid-area: area5;
-        width: 70px;
-        height: 40px;
-        padding-left: 35%;
-    }
+        }
+        
+        
+        #boton_comprar{
+            padding-left: 37%; 
+            padding-top: 20px;
+        }
+        
+        #propiedades_boton{
+            width: 100px;
+            height: 45px;
+            font-size: 20px;
+        }
 
 
 
 
-    /*comprar queries*/
+
+
+/*comprar queries*/
 
 
 
 
-    /*contacto media queries*/
+/*contacto media queries*/
 
-    #grilla_contacto {
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 80px 200px;
-        grid-template-areas: "area1 area1"
-            "area3 area3";
+#grilla_contacto {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80px 200px;
+    grid-template-areas: "area1 area1"
+        "area3 area3";
 
-    }
-
-
-    #contacto {
-        display: flex;
-        justify-content: center;
-        grid-area: area3;
-        flex-direction: column;
-        padding-left: 25%;
-    }
+}
 
 
-    #contacto input {
-        display: flex;
-        width: 200px;
-        height: 50px;
+#contacto {
+    display: flex;
+    justify-content: center;
+    grid-area: area3;
+    flex-direction: column;
+    padding-left: 25%;
+}
 
 
-    }
-
-    #p_contacto {
-        display: flex;
-        font-size: 12px;
-        font-weight: bold;
-        justify-content: center;
-        grid-area: area1;
-        text-decoration: underline;
-        padding-top: 5%;
-    }
-
-    #h2_contacto {
-        display: flex;
-        font-size: 20px;
-        grid-area: area1;
-        justify-content: center;
-        padding-bottom: 10%;
-
-    }
+#contacto input {
+    display: flex;
+    width: 200px;
+    height: 50px;
 
 
+}
+
+#p_contacto {
+    display: flex;
+    font-size: 12px;
+    font-weight: bold;
+    justify-content: center;
+    grid-area: area1;
+    text-decoration: underline;
+    padding-top: 5%;
+}
+
+#h2_contacto {
+    display: flex;
+    font-size: 20px;
+    grid-area: area1;
+    justify-content: center;
+    padding-bottom: 10%;
+
+}
 
 
-    /*contacto media queries*/
+
+
+/*contacto media queries*/
 }
