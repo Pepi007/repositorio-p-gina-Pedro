@@ -8,7 +8,7 @@
 body {
 	font-family: serif;
 	margin: 0;
-	background-image: $fondo_gradient;
+	background-color: $color_fondo;
 	background-size: 100%;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
@@ -24,7 +24,7 @@ body {
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		font-size: 30px;
 		color: rgba(255, 255, 255, 0.935);
-		&:hover {
+		&:hover{
 			color: $color_hover;
 		}
 	}
@@ -41,14 +41,16 @@ header {
 }
 a {
 	text-decoration: none;
-	display: inline;
+	display: flex;
 	justify-content: space-between;
+	padding-top: 10px;
 	padding: 20px;
 	font-size: 20px;
 	color: whitesmoke;
 	font-weight: bold;
-	&:hover {
-	color: $color_hover;
+	
+	&:hover{
+		color: $color_hover;
 	}
 }
 ul {
@@ -82,9 +84,26 @@ main {
 }
 #grilla_origen {
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 900px;
-	grid-template-areas: "area1 area1" "area1 area1";
-}
+	grid-template-rows:  100px 900px;
+	grid-template-areas: "area1 area1""area2 area2" ;
+	#h2_origen {
+		grid-area: area1;
+	}
+	#carta_origen {
+		display: flex;
+		justify-content: center;
+		grid-area: area2;
+		#imagen_1{
+			width: 600px;
+			height: 400px;
+			box-shadow: 5px 5px 10px black;
+			border-radius: 8px;
+		}
+	}
+		
+
+	}
+
 #carta1 {
 	grid-area: area1;
 }
@@ -297,7 +316,7 @@ footer {
 			padding: 10px;
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			font-size: 20px;
-			color: rgba(252, 164, 0, 0.902);
+			color: white;
 		}
 	}
 	header {
@@ -420,8 +439,25 @@ footer {
 	}
 	#grilla_origen {
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 500px;
-		grid-template-areas: "area1 area1" "area1 area1";
+		grid-template-rows: 70px 500px;
+		grid-template-areas: "area1 area1" "area2 area2";
+		#h2_origen {
+			grid-area: area1;
+			font-size: 20px;
+			grid-area: area1;
+		}
+		#carta_origen {
+			display: flex;
+			justify-content: center;
+			grid-area: area2;
+			#imagen_1{
+				width: 300px;
+				height: 170px;
+				box-shadow: 5px 5px 10px black;
+				border-radius: 8px;
+				grid-area: area2;
+			}
+		}
 	}
 	#carta1 {
 		width: 300px;
