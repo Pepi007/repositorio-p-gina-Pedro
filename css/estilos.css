@@ -74,47 +74,41 @@ h2 {
 main {
   display: grid; }
 
-#grilla_origen {
+.grilla__origen {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100px 900px;
   grid-template-areas: "area1 area1" "area2 area2"; }
-  #grilla_origen #h2_origen {
+  .grilla__origen .grilla__origen__h2 {
     grid-area: area1; }
-  #grilla_origen #carta_origen {
+  .grilla__origen .grilla__origen__carta {
     display: flex;
     justify-content: center;
     grid-area: area2; }
-    #grilla_origen #carta_origen #imagen_1 {
+    .grilla__origen .grilla__origen__carta #grilla__origen__img {
       width: 600px;
       height: 400px;
       box-shadow: 5px 5px 10px black;
       border-radius: 8px; }
 
-#carta1 {
-  grid-area: area1; }
-
-#carta_txt {
-  color: white; }
-
-#grillaproduccion {
+.grilla__produccion {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr;
   grid-template-areas: "area1 area2" "area3 area4"; }
 
-#h2subtitulo {
+.grilla__produccion__h2 {
   grid-area: area3;
   align-items: center;
   padding-bottom: 45%;
   padding-top: 0%;
   font-size: 35px; }
 
-#texto {
+.grilla__produccion__txt {
   grid-area: area3;
   align-items: center;
   padding-top: 70px;
   font-size: 25px; }
 
-#imgproduccion {
+.grilla__produccion__img {
   display: flex;
   grid-area: area2;
   width: 100%;
@@ -122,84 +116,69 @@ main {
   padding-top: 10%;
   padding-right: 5%; }
 
-#mapa {
+.grilla__produccion__mapa {
   display: flex;
   padding-top: 10%; }
 
-#h2produccion {
+.grilla__produccion__h2__2 {
   grid-area: area1;
   align-items: center;
   padding-bottom: 45%;
   padding-top: 0%;
   font-size: 35px; }
 
-#txtproduccion {
+.grilla__produccion__txt__2 {
   grid-area: area1;
   align-items: center;
   padding-top: 70px;
   font-size: 25px; }
 
-#grilla_comprar {
+.grilla__comprar {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100px 800px 200px;
   grid-template-areas: "area1 area1" "area3 area3" "area4 area4"; }
 
-.h1_comprar {
+.grilla__comprar__h1 {
   display: flex;
   grid-area: area1;
   justify-content: center;
   font-size: 30px;
   padding-top: 20px; }
 
-#container_carousel {
+.grilla__comprar__carousell {
   grid-area: area3; }
 
-#boton_comprar {
+.grilla__comprar__boton {
   grid-area: area4;
   padding-left: 37%;
-  padding-top: 20px; }
+  padding-top: 20px;
+  justify-content: center; }
 
-#grilla_contacto {
+.grilla__contacto {
   grid-template-columns: 50% 50%;
   grid-template-rows: 100px 400px;
   grid-template-areas: "area1 area1" "area3 area3"; }
 
-#form_contacto {
+.grilla__contacto__form {
   grid-area: area3;
   width: 65%;
   height: 20%; }
 
-#contacto {
-  display: flex;
-  justify-content: center;
-  grid-area: area3;
-  flex-direction: column;
-  padding-left: 37.5%; }
-  #contacto input {
-    display: flex;
-    width: 300px;
-    height: 100px; }
-
-#h2_contacto {
+.grilla__contacto__h2 {
   display: flex;
   font-size: 30px;
   grid-area: area1;
   justify-content: center;
   padding-top: 30px; }
 
-#propiedades_boton {
-  width: 200px;
-  height: 90px;
-  font-size: 30px; }
-
-#maingrilla {
+.main__grilla {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 200px 1fr 200px;
   grid-template-areas: "area1 area1" "area3 area3" "area4 area4" "area5 area5";
   justify-content: space-evenly;
   align-content: space-around; }
 
-#indexh2 {
+.main__grilla__h2 {
   grid-area: area1;
   display: flex;
   padding-top: 20px;
@@ -207,64 +186,22 @@ main {
   justify-content: center;
   font-size: 35px; }
 
-#indextxt {
+.main__grilla__txt {
   grid-area: area3;
   display: flex;
   font-size: 25px; }
 
-#indexh2_2 {
+.main__grilla__h2__2 {
   grid-area: area4;
   display: flex;
   padding-top: 20px;
   font-size: 35px;
   justify-content: center; }
 
-#indextxt_2 {
+.main__grilla__txt__2 {
   grid-area: area5;
   display: flex;
   font-size: 25px; }
-
-.produccion img {
-  display: block;
-  width: 600px;
-  height: 400px;
-  padding-left: 25%;
-  padding-top: 20px;
-  padding-bottom: 20px; }
-
-#foto1 {
-  display: flex;
-  grid-area: area4;
-  width: 100%;
-  height: 300px;
-  justify-content: center; }
-
-#origen_img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 300px;
-  height: 100px; }
-
-.producto img {
-  display: block;
-  width: 600px;
-  height: 400px;
-  padding-left: 25%;
-  padding-top: 20px;
-  padding-bottom: 20px; }
-
-#boton {
-  padding-left: 44%; }
-  #boton button {
-    display: block;
-    background-color: darkorange;
-    font-size: 25px;
-    color: antiquewhite;
-    border-color: white;
-    border-radius: 10px; }
-    #boton button:hover {
-      background-color: rgba(95, 60, 28, 0.776); }
 
 footer {
   display: block;
@@ -289,17 +226,17 @@ footer {
   padding-top: 20px; }
 
 @media screen and (max-width: 788px) {
-  .logo a {
+  .header__logo a {
     padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     color: white; }
-  header {
+  .header {
     display: flex;
     grid-area: area0;
     flex-direction: column;
     height: 100%; }
-  a {
+  .nav__lista__item {
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -307,155 +244,119 @@ footer {
     font-size: 10px;
     font-weight: bold;
     padding: 5px; }
-    a:hover {
+    .nav__lista__item:hover {
       color: rgba(95, 60, 28, 0.776); }
-  ul {
+  .nav__lista {
     display: flex;
     flex-direction: column;
     padding: 0; }
-  #maingrilla {
+  .main__grilla {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 90px 1fr 90px;
-    grid-template-areas: "area1 area1" "area3 area3" "area4 area4" "area5 area5";
-    justify-content: space-evenly;
-    align-content: space-around; }
-  .subtitulo {
-    grid-area: area3;
-    display: flex;
-    justify-content: center;
-    padding-bottom: 45%;
-    font-size: 30px; }
-  #indexh2 {
+    grid-template-rows: 60px 100px 60px 100px;
+    grid-template-areas: "area1 area1" "area3 area3" "area4 area4" "area5 area5"; }
+  .main__grilla__h2 {
     grid-area: area1;
     display: flex;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 20px;
-    justify-content: center; }
-  #indextxt {
+    padding: 15px; }
+  .main__grilla__txt {
     grid-area: area3;
     display: flex;
     font-size: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-    justify-content: center; }
-  #indexh2_2 {
+    padding: 15px; }
+  .main__grilla__h2__2 {
     grid-area: area4;
     display: flex;
-    padding-top: 20px;
+    padding-top: 10px;
     font-size: 20px;
-    justify-content: center; }
-  #indextxt_2 {
+    padding: 15px; }
+  .main__grilla__txt__2 {
     grid-area: area5;
     display: flex;
     font-size: 15px;
-    padding-left: 5px;
-    padding-right: 5px; }
-  #grillaproduccion {
+    padding: 15px; }
+  .grilla__produccion {
     grid-template-columns: 100%;
-    grid-template-rows: 40px 200px 130px 40px 300px 130px;
+    grid-template-rows: 40px 200px 140px 40px 300px 130px;
     grid-template-areas: "area1 " "area2" "area3" "area4" "area5" "area6"; }
-  #imgproduccion {
+  .grilla__produccion__img {
     grid-area: area2;
     display: flex;
     justify-content: center;
-    width: 300px;
-    height: 90%;
-    padding-left: 20%; }
-  #h2produccion {
+    width: 350px;
+    height: 95%;
+    padding-left: 15%; }
+  .grilla__produccion__h2 {
     grid-area: area1;
     display: flex;
     font-size: 20px;
     padding-top: 20px; }
-  #txtproduccion {
+  .grilla__produccion__txt {
     grid-area: area3;
     display: flex;
     justify-content: center;
     font-size: 15px;
     padding: 0;
-    padding-left: 5px;
-    padding-right: 5px; }
-  #mapa {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .grilla__produccion__mapa {
     grid-area: area5;
     display: flex;
     justify-content: center;
-    width: 300px;
-    height: 80%;
-    padding-left: 12%; }
-  #texto {
+    width: 350px;
+    height: 95%;
+    padding-left: 10%; }
+  .grilla__produccion__txt__2 {
     grid-area: area6;
     display: flex;
     justify-content: center;
     font-size: 15px;
     padding: 0;
-    padding-left: 5px;
-    padding-right: 5px; }
-  #h2subtitulo {
-    grid-area: 4;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .grilla__produccion__h2__2 {
+    grid-area: area4;
     justify-content: center;
     font-size: 20px;
     padding: 0;
     margin: 0; }
-  #grilla_origen {
+  .grilla__origen {
     grid-template-columns: 50% 50%;
     grid-template-rows: 70px 500px;
     grid-template-areas: "area1 area1" "area2 area2"; }
-    #grilla_origen #h2_origen {
+    .grilla__origen .grilla__origen__h2 {
       grid-area: area1;
       font-size: 20px;
       grid-area: area1; }
-    #grilla_origen #carta_origen {
+    .grilla__origen .grilla__origen__carta {
       display: flex;
       justify-content: center;
       grid-area: area2; }
-      #grilla_origen #carta_origen #imagen_1 {
+      .grilla__origen .grilla__origen__carta #grilla__origen__img {
         width: 300px;
         height: 170px;
         box-shadow: 5px 5px 10px black;
         border-radius: 8px;
         grid-area: area2; }
-  #carta1 {
-    width: 300px;
-    height: 80%; }
-  #subtitulo_origen {
-    font-size: 20px; }
-  #txt_origen {
-    font-size: 17px; }
-  #grilla_comprar {
+  .grilla__comprar {
     grid-template-columns: 50% 50%;
     grid-template-rows: 90px 400fr 150px;
     grid-template-areas: "area1 area1" "area3 area3" "area4 area4"; }
-  .h1_comprar {
+  .grilla__comprar__h1 {
     font-size: 20px; }
-  #boton_comprar {
+  .grilla__comprar__boton {
     padding-left: 37%;
     padding-top: 20px; }
-  #propiedades_boton {
+  .grilla__comprar__propiedades__boton {
     width: 100px;
     height: 45px;
     font-size: 20px; }
-  #grilla_contacto {
+  .grilla__contacto {
     grid-template-columns: 50% 50%;
     grid-template-rows: 80px 200px;
     grid-template-areas: "area1 area1" "area3 area3"; }
-  #contacto {
-    display: flex;
-    justify-content: center;
-    grid-area: area3;
-    flex-direction: column;
-    padding-left: 25%; }
-    #contacto input {
-      display: flex;
-      width: 200px;
-      height: 50px; }
-  #p_contacto {
-    display: flex;
-    font-size: 12px;
-    font-weight: bold;
-    justify-content: center;
-    grid-area: area1;
-    text-decoration: underline;
-    padding-top: 5%; }
-  #h2_contacto {
+  .grilla__contacto__h2 {
     display: flex;
     font-size: 20px;
     grid-area: area1;
