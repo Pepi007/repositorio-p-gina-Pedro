@@ -1,5 +1,10 @@
 
 @import "scss/partials/_variables.scss";
+@import "scss/partials/_mixin.scss";
+
+
+
+
 
 *{
 	margin: 0;
@@ -8,7 +13,7 @@
 body {
 	font-family: serif;
 	margin: 0;
-	background-color: $color_fondo;
+	background-color: map-get($color_1, fondo); 
 	background-size: 100%;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
@@ -25,7 +30,7 @@ body {
 		font-size: 30px;
 		color: rgba(255, 255, 255, 0.935);
 		&:hover{
-			color: $color_hover;
+			color: map-get($color_1 , hover );
 		}
 	}
 }
@@ -50,7 +55,7 @@ a {
 	font-weight: bold;
 	
 	&:hover{
-		color: $color_hover;
+		color: map-get($color_1,hover );
 	}
 }
 ul {
@@ -87,7 +92,7 @@ main {
 	grid-template-rows:  100px 900px;
 	grid-template-areas: "area1 area1""area2 area2" ;
 	.grilla__origen__h2 {
-		grid-area: area1;
+		@include subtitulo(black, area1 )
 	}
 	.grilla__origen__carta {
 		display: flex;
@@ -111,17 +116,19 @@ main {
 	grid-template-areas: "area1 area2" "area3 area4";
 }
 .grilla__produccion__h2{
-	grid-area: area3;
-	align-items: center;
-	padding-bottom: 45%;
-	padding-top: 0%;
-	font-size: 35px;
+	@include subtitulo_produccion(black,area3 );
+	
+	
 }
 .grilla__produccion__txt {
-	grid-area: area3;
+	@include parrafo(black,area3 );
 	align-items: center;
 	padding-top: 70px;
-	font-size: 25px;
+}
+
+.grilla__produccion__txt__2{
+	@extend .grilla__produccion__txt;
+	grid-area: area1;
 }
 .grilla__produccion__img {
 	display: flex;
@@ -136,28 +143,17 @@ main {
 	padding-top: 10%;
 }
 .grilla__produccion__h2__2 {
-	grid-area: area1;
-	align-items: center;
-	padding-bottom: 45%;
-	padding-top: 0%;
-	font-size: 35px;
+	@include subtitulo_produccion(black,area1 );
+	
 }
-.grilla__produccion__txt__2 {
-	grid-area: area1;
-	align-items: center;
-	padding-top: 70px;
-	font-size: 25px;
-}
+
 .grilla__comprar {
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 100px 800px 200px;
 	grid-template-areas: "area1 area1" "area3 area3" "area4 area4";
 }
 .grilla__comprar__h1 {
-	display: flex;
-	grid-area: area1;
-	justify-content: center;
-	font-size: 30px;
+	@include subtitulo(black,area1 );
 	padding-top: 20px;
 }
 .grilla__comprar__carousell {
@@ -182,11 +178,8 @@ main {
 }
 
 .grilla__contacto__h2 {
-	display: flex;
-	font-size: 30px;
-	grid-area: area1;
-	justify-content: center;
-	padding-top: 30px;
+	@include subtitulo(black,area1 );
+
 }
 
 .main__grilla {
@@ -197,29 +190,18 @@ main {
 	align-content: space-around;
 }
 .main__grilla__h2{
-	grid-area: area1;
-	display: flex;
-	padding-top: 20px;
-	font-size: 30px;
-	justify-content: center;
-	font-size: 35px;
+	@include subtitulo(black, area1);
+	
+
 }
 .main__grilla__txt {
-	grid-area: area3;
-	display: flex;
-	font-size: 25px;
+	@include parrafo(black, area3);
 }
 .main__grilla__h2__2 {
-	grid-area: area4;
-	display: flex;
-	padding-top: 20px;
-	font-size: 35px;
-	justify-content: center;
+	@include subtitulo(black, area4 );
 }
 .main__grilla__txt__2{
-	grid-area: area5;
-	display: flex;
-	font-size: 25px;
+	@include parrafo(black, area5);
 }
 
 
@@ -283,88 +265,57 @@ footer {
 
 	.main__grilla {
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 60px 100px 60px 100px;
+		grid-template-rows: 90px 270px 90px 270px;
 		grid-template-areas: "area1 area1" "area3 area3" "area4 area4" "area5 area5";
 		
 	}
 	.main__grilla__h2{
-		grid-area: area1;
-		display: flex;
-		padding-top: 10px;
-		font-size: 20px;
-		padding: 15px;
+		@include subtitulo_mobile(black, area1);	
 	}
 	.main__grilla__txt {
-		grid-area: area3;
-		display: flex;
-		font-size: 15px;
-		padding: 15px;
+		@include parrafo_mobile(black,area3);
+		
 	}
 	.main__grilla__h2__2 {
-		grid-area: area4;
-		display: flex;
-		padding-top: 10px;
-		font-size: 20px;
-		padding: 15px;
+		@include subtitulo_mobile(black, area4);
 	}
 	.main__grilla__txt__2{
-		grid-area: area5;
-		display: flex;
-		font-size: 15px;
-		padding: 15px;
+		@include parrafo_mobile(black,area5 );
 	}
 	.grilla__produccion{
 		grid-template-columns: 100%;
-		grid-template-rows: 40px 200px 140px 40px 300px 130px;
+		grid-template-rows: 80px 240px 340px 60px 300px 300px;
 		grid-template-areas: "area1 ""area2" "area3" "area4" "area5" "area6";
 	}
+
+	
 	.grilla__produccion__img {
 		grid-area: area2;
-		display: flex;
-		justify-content: center;
+		display: block;	
 		width: 350px;
-		height: 95%;
-		padding-left: 15%;
-	}
+		height: 95%;;	
+		margin: auto;
 
+	}
 	.grilla__produccion__h2 {
-		grid-area: area1;
-		display: flex;
-		font-size: 20px;
-		padding-top: 20px;
+		@include subtitulo_mobile(black,area1 )
 	}
 	.grilla__produccion__txt {
-		grid-area: area3;
-		display: flex;
-		justify-content: center;
-		font-size: 15px;
-		padding: 0;
-		padding-left: 10px;
-		padding-right: 10px;
+		@include parrafo_mobile(black,area3 );
 	}
 	.grilla__produccion__mapa {
 		grid-area: area5;
-		display: flex;
-		justify-content: center;
+		display: blocking;
+		margin: auto;
 		width: 350px;
 		height: 95%;
-		padding-left: 10%;
+		padding-top: 4%;
 	}
 	.grilla__produccion__txt__2  {
-		grid-area: area6;
-		display: flex;
-		justify-content: center;
-		font-size: 15px;
-		padding: 0;
-		padding-left: 10px;
-		padding-right: 10px;
+		@include parrafo_mobile(black,area6);
 	}
 	.grilla__produccion__h2__2 {
-		grid-area: area4;
-		justify-content: center;
-		font-size: 20px;
-		padding: 0;
-		margin: 0;
+		@include subtitulo_mobile(black,area4 )
 	}
 	.grilla__origen {
 		grid-template-columns: 50% 50%;
@@ -395,7 +346,7 @@ footer {
 		grid-template-areas: "area1 area1" "area3 area3" "area4 area4";
 	}
 	.grilla__comprar__h1 {
-		font-size: 20px;
+		@include subtitulo_mobile(black,area1 )
 	}
 	.grilla__comprar__boton {
 		padding-left: 37%;
@@ -415,11 +366,8 @@ footer {
 
 	
 	.grilla__contacto__h2 {
-		display: flex;
-		font-size: 20px;
-		grid-area: area1;
-		justify-content: center;
-		padding-bottom: 10%;
+		@include subtitulo_mobile(black,area1 );
+		font-size: 22px;
 	}
 }
 

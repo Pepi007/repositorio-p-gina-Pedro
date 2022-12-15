@@ -1,0 +1,45 @@
+@mixin subtitulo($color, $grid_area){
+    display: flex;
+    padding-top: 30px;
+    font-size: 35px;
+    justify-content: center;
+    color: $color;
+	grid-area: $grid_area;
+}
+
+@mixin parrafo($color, $grid_area){
+	grid-area: $grid_area;
+	display: flex;
+	font-size: 25px;
+	color: $color;
+}
+
+@mixin subtitulo_mobile($color, $grid_area){
+		display: flex;
+		padding-top: 8%;
+		font-size: 23px;
+		padding-bottom: 10%;
+		grid-area: $grid_area;
+		color: $color;
+}
+
+@mixin subtitulo_produccion($color, $grid_area){
+	display: flex;
+    padding-top: 30px;
+    font-size: 35px;
+    justify-content: center;
+    color: $color;
+	grid-area: $grid_area;
+	align-items: center;
+	padding-bottom: 45%;
+	padding-top: 0%;
+}
+
+@mixin parrafo_mobile($color, $grid_area){
+		display: flex;
+		font-size: 18px;
+		padding-top: 12%;
+		padding-bottom: 12%;
+		grid-area: $grid_area;
+		color: $color;
+}
