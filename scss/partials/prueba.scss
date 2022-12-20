@@ -9,6 +9,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 body {
 	font-family: serif;
@@ -88,26 +89,97 @@ main {
 	display: grid;
 }
 .grilla__origen {
-	grid-template-columns: 50% 50%;
-	grid-template-rows:  100px 900px;
-	grid-template-areas: "area1 area1""area2 area2" ;
-	.grilla__origen__h2 {
-		@include subtitulo(black, area1 )
-	}
-	.grilla__origen__carta {
-		display: flex;
-		justify-content: center;
-		grid-area: area2;
-		#grilla__origen__img{
-			width: 600px;
-			height: 400px;
-			box-shadow: 5px 5px 10px black;
-			border-radius: 8px;
-		}
-	}
-		
+	display: flex;
+}
 
-	}
+#titulo__origen{
+	
+}
+
+.section{
+	padding-top: 10%;
+	width: 33%;
+	height: 60vh;
+	background-color: $color_fondo;
+	display: flex;
+	justify-content: center;
+	grid-area: area2;
+}
+
+.box{
+	width: 100%;
+	height: 50vh;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	margin: 1.5%;
+	border-radius: 10px;
+	grid-area: area2;
+}
+
+.box img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	grid-area: area2;
+}
+
+.box .hover{
+	width: 0%;
+	height: 50vh;
+	background-color: rgba(23, 20, 20, 0.717);
+	position: absolute;
+	top:0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	transition: 1s;
+	color: aliceblue;
+	grid-area: area2;
+}
+
+.hover p{
+	color: aliceblue;
+	text-shadow: 1px 1px 1px black;
+	font-size: 2.5em;
+	text-transform: random($limit: 1);
+	grid-area: area2;
+}
+
+.box:hover .hover{
+	width: 100%;
+	grid-area: area2;
+}
+
+p{
+	color: aliceblue;
+	grid-area: area2;
+}
+
+#button{
+	display: flex;
+	position: absolute;
+	bottom: 20%;
+	padding-left: 10%;
+	padding-top: 5%;
+}
+
+#button2{
+	display: flex;
+	position: absolute;
+	bottom: 20%;
+	padding-left: 76.5%;
+	padding-top: 5%;
+}
+
+#button3{
+	display: flex;
+	position: absolute;
+	bottom: 20%;
+	padding-left: 42%;
+	padding-top: 5%;
+}
 
 
 .grilla__produccion {
@@ -159,12 +231,13 @@ main {
 .grilla__comprar__carousell {
 	grid-area: area3;
 }
-.grilla__comprar__boton {
+.grilla__comprar__boton  {
 	grid-area: area4;
-	padding-left: 37%;
-	padding-top: 20px;
-	justify-content: center;
+	padding-top: 5%;
 }
+
+        
+
 
 .grilla__contacto {
 	grid-template-columns: 50% 50%;
@@ -265,26 +338,37 @@ footer {
 
 	.main__grilla {
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 90px 270px 90px 270px;
+		grid-template-rows: 50px 220px 50px 220px;
 		grid-template-areas: "area1 area1" "area3 area3" "area4 area4" "area5 area5";
 		
 	}
+
+	.textos__index{
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+	}
 	.main__grilla__h2{
 		@include subtitulo_mobile(black, area1);	
+		
 	}
 	.main__grilla__txt {
 		@include parrafo_mobile(black,area3);
 		
+		padding-left: 3%;
+		padding-right: 3%
 	}
 	.main__grilla__h2__2 {
 		@include subtitulo_mobile(black, area4);
 	}
 	.main__grilla__txt__2{
 		@include parrafo_mobile(black,area5 );
+		padding-left: 3%;
+		padding-right: 3%
 	}
 	.grilla__produccion{
 		grid-template-columns: 100%;
-		grid-template-rows: 80px 240px 340px 60px 300px 300px;
+		grid-template-rows: 80px 240px 200px 60px 300px 220px;
 		grid-template-areas: "area1 ""area2" "area3" "area4" "area5" "area6";
 	}
 
@@ -302,6 +386,8 @@ footer {
 	}
 	.grilla__produccion__txt {
 		@include parrafo_mobile(black,area3 );
+		padding-left: 3%;
+		padding-right: 3%
 	}
 	.grilla__produccion__mapa {
 		grid-area: area5;
@@ -313,32 +399,61 @@ footer {
 	}
 	.grilla__produccion__txt__2  {
 		@include parrafo_mobile(black,area6);
+		padding-left: 3%;
+		padding-right: 3%
 	}
 	.grilla__produccion__h2__2 {
 		@include subtitulo_mobile(black,area4 )
 	}
+
+
 	.grilla__origen {
-		grid-template-columns: 50% 50%;
-		grid-template-rows: 70px 500px;
-		grid-template-areas: "area1 area1" "area2 area2";
-		.grilla__origen__h2 {
-			grid-area: area1;
-			font-size: 20px;
-			grid-area: area1;
-		}
-		.grilla__origen__carta {
-			display: flex;
-			justify-content: center;
-			grid-area: area2;
-			#grilla__origen__img{
-				width: 300px;
-				height: 170px;
-				box-shadow: 5px 5px 10px black;
-				border-radius: 8px;
-				grid-area: area2;
-			}
-		}
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		
 	}
+	
+	#titulo__origen{
+		
+	}
+	
+	.section{
+		padding-left: 3%;
+		padding-top: 0%;
+		width: 45%;
+		height: 30vh;
+		background-color: map-get($color_1 , fondo );
+		display: flex;
+		justify-content: center;
+		grid-area: area2;
+	}
+	
+	.box{
+		width: 100%;
+		height: 30vh;
+		text-align: center;
+		overflow: hidden;
+		position: relative;
+		margin: 1.5%;
+		border-radius: 0px;
+		grid-area: area2;
+	}
+	
+	.box img{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		grid-area: area2;
+		padding-top: 5%;
+	}
+
+	p{
+		display: flex;
+		font-size: 16px;
+		padding-left: 50%;
+	}
+	
 
 	.grilla__comprar {
 		grid-template-columns: 50% 50%;
@@ -349,15 +464,11 @@ footer {
 		@include subtitulo_mobile(black,area1 )
 	}
 	.grilla__comprar__boton {
-		padding-left: 37%;
-		padding-top: 20px;
+		grid-area: area4;
+		padding-right: 35%;
 	}
 	
-	.grilla__comprar__propiedades__boton{
-		width: 100px;
-		height: 45px;
-		font-size: 20px;
-	}
+	
 	.grilla__contacto {
 		grid-template-columns: 50% 50%;
 		grid-template-rows: 80px 200px;

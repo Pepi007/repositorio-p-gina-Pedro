@@ -38,8 +38,19 @@
 @mixin parrafo_mobile($color, $grid_area){
 		display: flex;
 		font-size: 18px;
-		padding-top: 12%;
-		padding-bottom: 12%;
+		padding-top: 7%;
+		padding-bottom: 7%;
 		grid-area: $grid_area;
 		color: $color;
+}
+
+
+@mixin section__comprar($grid_area){
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	background-color: aliceblue;
+	justify-content: center;
+	align-items: center;
+	grid-area: $grid_area;
 }
