@@ -226,8 +226,8 @@ p {
 
 .grilla__contacto {
   grid-template-columns: 50% 50%;
-  grid-template-rows: 100px 400px;
-  grid-template-areas: "area1 area1" "area3 area3"; }
+  grid-template-rows: 100px 400px 200px;
+  grid-template-areas: "area1 area1" "area3 area3" "area4 area4"; }
 
 .grilla__contacto__form {
   grid-area: area3;
@@ -241,6 +241,13 @@ p {
   justify-content: center;
   color: black;
   grid-area: area1; }
+
+.grilla__contacto__txt {
+  grid-area: area4;
+  display: flex;
+  font-size: 25px;
+  color: black;
+  justify-content: center; }
 
 .main__grilla {
   grid-template-columns: 50% 50%;
@@ -373,7 +380,9 @@ footer {
     display: block;
     width: 350px;
     height: 95%;
-    margin: auto; }
+    margin: auto;
+    padding-left: 3%;
+    padding-right: 3%; }
   .grilla__produccion__h2 {
     display: flex;
     padding-top: 8%;
@@ -396,7 +405,9 @@ footer {
     margin: auto;
     width: 350px;
     height: 95%;
-    padding-top: 4%; }
+    padding-top: 4%;
+    padding-left: 3%;
+    padding-right: 3%; }
   .grilla__produccion__txt__2 {
     display: flex;
     font-size: 18px;
@@ -461,8 +472,8 @@ footer {
     padding-right: 35%; }
   .grilla__contacto {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 80px 200px;
-    grid-template-areas: "area1 area1" "area3 area3"; }
+    grid-template-rows: 80px 400px 150px;
+    grid-template-areas: "area1 area1" "area3 area3" "area4 area4"; }
   .grilla__contacto__h2 {
     display: flex;
     padding-top: 8%;
@@ -470,4 +481,15 @@ footer {
     padding-bottom: 10%;
     grid-area: area1;
     color: black;
-    font-size: 22px; } }
+    font-size: 22px;
+    justify-content: center; }
+  .grilla__contacto__txt {
+    display: flex;
+    font-size: 18px;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    grid-area: area4;
+    color: black;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 3%; } }

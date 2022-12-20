@@ -92,9 +92,7 @@ main {
 	display: flex;
 }
 
-#titulo__origen{
-	
-}
+
 
 .section{
 	padding-top: 10%;
@@ -241,8 +239,8 @@ p{
 
 .grilla__contacto {
 	grid-template-columns: 50% 50%;
-	grid-template-rows: 100px 400px;
-	grid-template-areas: "area1 area1" "area3 area3";
+	grid-template-rows: 100px 400px 200px;
+	grid-template-areas: "area1 area1" "area3 area3" "area4 area4";
 }
 .grilla__contacto__form {
 	grid-area: area3;
@@ -252,7 +250,11 @@ p{
 
 .grilla__contacto__h2 {
 	@include subtitulo(black,area1 );
+}
 
+.grilla__contacto__txt{
+	@include parrafo(black,area4);
+	justify-content: center;
 }
 
 .main__grilla {
@@ -379,7 +381,8 @@ footer {
 		width: 350px;
 		height: 95%;;	
 		margin: auto;
-
+		padding-left: 3%;
+		padding-right: 3%
 	}
 	.grilla__produccion__h2 {
 		@include subtitulo_mobile(black,area1 )
@@ -396,6 +399,8 @@ footer {
 		width: 350px;
 		height: 95%;
 		padding-top: 4%;
+		padding-left: 3%;
+		padding-right: 3%
 	}
 	.grilla__produccion__txt__2  {
 		@include parrafo_mobile(black,area6);
@@ -471,14 +476,22 @@ footer {
 	
 	.grilla__contacto {
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 80px 200px;
-		grid-template-areas: "area1 area1" "area3 area3";
+		grid-template-rows: 80px 400px 150px;
+		grid-template-areas: "area1 area1" "area3 area3" "area4 area4";
 	}
 
 	
 	.grilla__contacto__h2 {
 		@include subtitulo_mobile(black,area1 );
 		font-size: 22px;
+		justify-content: center;
+	}
+
+	.grilla__contacto__txt{
+		@include parrafo_mobile(black,area4);
+		justify-content: center;
+		padding-left:5%;
+		padding-right: 3%;
 	}
 }
 
