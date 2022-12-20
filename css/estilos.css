@@ -78,6 +78,25 @@ main {
 .grilla__origen {
   display: flex; }
 
+.nota__sticky {
+  position: fixed;
+  color: antiquewhite;
+  top: 0px;
+  background-color: rgba(255, 68, 0, 0.657);
+  border-radius: 20px;
+  height: 100px;
+  line-height: 25px;
+  bottom: 30px;
+  right: 37%;
+  text-align: center;
+  top: 12%; }
+
+.nota__sticky p {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 8%;
+  font-size: 20px; }
+
 .section {
   padding-top: 10%;
   width: 33%;
@@ -428,10 +447,27 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: center; }
+  .nota__sticky {
+    position: fixed;
+    color: antiquewhite;
+    top: 0px;
+    background-color: rgba(255, 68, 0, 0.657);
+    border-radius: 20px;
+    height: 75px;
+    line-height: 25px;
+    bottom: 30px;
+    right: 2%;
+    text-align: center;
+    top: 80%; }
+  .nota__sticky p {
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 5%;
+    font-size: 17px; }
   .section {
     padding-left: 3%;
     padding-top: 0%;
-    width: 70%;
+    width: 95%;
     height: 50vh;
     background-color: rgba(251, 226, 192, 0.927);
     display: flex;
@@ -472,7 +508,8 @@ footer {
     padding-left: 50%; }
   .hover p {
     font-size: 20px;
-    padding-top: 1%; }
+    padding-top: 1%;
+    padding-right: 45%; }
   .grilla__comprar {
     grid-template-columns: 50% 50%;
     grid-template-rows: 90px 400fr 150px;
