@@ -419,15 +419,13 @@ footer {
 		
 	}
 	
-	#titulo__origen{
-		
-	}
+	
 	
 	.section{
 		padding-left: 3%;
 		padding-top: 0%;
-		width: 45%;
-		height: 30vh;
+		width: 70%;
+		height: 50vh;
 		background-color: map-get($color_1 , fondo );
 		display: flex;
 		justify-content: center;
@@ -436,7 +434,7 @@ footer {
 	
 	.box{
 		width: 100%;
-		height: 30vh;
+		height: 50vh;
 		text-align: center;
 		overflow: hidden;
 		position: relative;
@@ -453,10 +451,32 @@ footer {
 		padding-top: 5%;
 	}
 
+	.box .hover{
+		width: 0%;
+		height: 60vh;
+		background-color: rgba(23, 20, 20, 0.717);
+		position: absolute;
+		top:3%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		transition: 1s;
+		color: aliceblue;
+		grid-area: area2;
+		object-fit: cover;
+	}
+
 	p{
 		display: flex;
 		font-size: 16px;
 		padding-left: 50%;
+	}
+
+	
+	.hover p{
+		font-size: 20px;
+		padding-top: 1%;
 	}
 	
 
@@ -469,8 +489,11 @@ footer {
 		@include subtitulo_mobile(black,area1 )
 	}
 	.grilla__comprar__boton {
+		display: flex;
 		grid-area: area4;
+		padding-left: 0%;
 		padding-right: 35%;
+		justify-content: center;
 	}
 	
 	
@@ -484,7 +507,6 @@ footer {
 	.grilla__contacto__h2 {
 		@include subtitulo_mobile(black,area1 );
 		font-size: 22px;
-		justify-content: center;
 	}
 
 	.grilla__contacto__txt{
