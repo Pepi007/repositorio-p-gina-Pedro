@@ -341,9 +341,9 @@ footer {
     display: flex;
     flex-direction: column;
     color: white;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
-    padding: 5px; }
+    padding: 6.5px; }
     .nav__lista__item:hover {
       color: rgba(95, 60, 28, 0.776); }
   .nav__lista {
