@@ -361,13 +361,13 @@ footer {
   .main__grilla__h2 {
     display: flex;
     padding-top: 8%;
-    font-size: 23px;
+    font-size: 25px;
     padding-bottom: 10%;
     grid-area: area1;
     color: black; }
   .main__grilla__txt {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 7%;
     padding-bottom: 7%;
     grid-area: area3;
@@ -377,13 +377,13 @@ footer {
   .main__grilla__h2__2 {
     display: flex;
     padding-top: 8%;
-    font-size: 23px;
+    font-size: 25px;
     padding-bottom: 10%;
     grid-area: area4;
     color: black; }
   .main__grilla__txt__2 {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 7%;
     padding-bottom: 7%;
     grid-area: area5;
@@ -405,13 +405,13 @@ footer {
   .grilla__produccion__h2 {
     display: flex;
     padding-top: 8%;
-    font-size: 23px;
+    font-size: 25px;
     padding-bottom: 10%;
     grid-area: area1;
     color: black; }
   .grilla__produccion__txt, .grilla__produccion__txt__2 {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 7%;
     padding-bottom: 7%;
     grid-area: area3;
@@ -429,7 +429,7 @@ footer {
     padding-right: 3%; }
   .grilla__produccion__txt__2 {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 7%;
     padding-bottom: 7%;
     grid-area: area6;
@@ -439,7 +439,7 @@ footer {
   .grilla__produccion__h2__2 {
     display: flex;
     padding-top: 8%;
-    font-size: 23px;
+    font-size: 25px;
     padding-bottom: 10%;
     grid-area: area4;
     color: black; }
@@ -517,7 +517,7 @@ footer {
   .grilla__comprar__h1 {
     display: flex;
     padding-top: 8%;
-    font-size: 23px;
+    font-size: 25px;
     padding-bottom: 10%;
     grid-area: area1;
     color: black; }
@@ -534,14 +534,14 @@ footer {
   .grilla__contacto__h2 {
     display: flex;
     padding-top: 8%;
-    font-size: 23px;
+    font-size: 25px;
     padding-bottom: 10%;
     grid-area: area1;
     color: black;
     font-size: 22px; }
   .grilla__contacto__txt {
     display: flex;
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 7%;
     padding-bottom: 7%;
     grid-area: area4;

@@ -17,7 +17,7 @@
 @mixin subtitulo_mobile($color, $grid_area){
 		display: flex;
 		padding-top: 8%;
-		font-size: 23px;
+		font-size: 25px;
 		padding-bottom: 10%;
 		grid-area: $grid_area;
 		color: $color;
@@ -37,7 +37,7 @@
 
 @mixin parrafo_mobile($color, $grid_area){
 		display: flex;
-		font-size: 18px;
+		font-size: 20px;
 		padding-top: 7%;
 		padding-bottom: 7%;
 		grid-area: $grid_area;
