@@ -16,12 +16,14 @@ body {
   flex-direction: column;
   min-height: 100vh; }
 
-.logo a {
-  padding: 20px;
+.header__logo a {
+  display: flex;
+  padding-top: px;
+  flex-direction: row;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 30px;
   color: rgba(255, 255, 255, 0.935); }
-  .logo a:hover {
+  .header__logo a:hover {
     color: rgba(58, 30, 30, 0.693); }
 
 header {
@@ -32,7 +34,8 @@ header {
   margin: 0;
   background-color: rgba(248, 139, 43, 0.791);
   height: 90px;
-  color: whitesmoke; }
+  color: whitesmoke;
+  padding-top: 2%; }
 
 a {
   text-decoration: none;
